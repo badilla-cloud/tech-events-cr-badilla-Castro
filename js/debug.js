@@ -15,10 +15,11 @@ function mostrarResumen(texto) {
 }
 
 function registrarInscripcion() {
-const inscritos = Number(inputCantidad.value);  totalInscritos = totalInscritos + inscritos;
+  const inscritos = Number(inputCantidad.value);
+  totalInscritos = totalInscritos + inscritos;
   cuposDisponibles = cuposTotales - totalInscritos;
 
-  if (cuposDisponibles > 0) {
+   if (cuposDisponibles >= 0) {
     mostrarResumen(`Inscripción exitosa. Cupos disponibles: ${cuposDisponibles}`);
   } else {
     mostrarResumen("No hay cupos suficientes");
